@@ -13,6 +13,8 @@ def menu():
     print("4 - Listar itens da lista remota")
     print("5 - Limpar lista remota")
     print("6 - Chamada lenta (RPC síncrono)")
+    print("7 - Remover item da lista") #novo
+    print("8 -  Contar caracteres de um texto") #novo
     print("0 - Sair")
 
 
@@ -62,6 +64,16 @@ def main():
 
                 print(resultado)
                 print(f"Tempo total de espera no cliente: {fim - inicio:.2f} s")
+
+            elif opcao == "7":
+                item = input("Qual item você deseja retirar da lista? ").strip()
+                resultado = conn.root.remover_item(item)
+                print(f"Resultado remoto: {resultado}")
+
+            elif opcao == "8":
+                texto = input("escreva o texto: ")
+                caracteres = conn.root.contar_caracteres(texto)
+                print(f"o numero de caracteres é {caracteres}")
 
             elif opcao == "0":
                 print("Encerrando cliente.")

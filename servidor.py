@@ -39,6 +39,15 @@ class CalculadoraService(rpyc.Service):
         time.sleep(segundos)
         return f"Servidor demorou {segundos} segundo(s) para responder"
 
+    def exposed_remover_item(self, texto):
+        if item in self.__class__.lista_compartilhada:
+            self.__class__.lista_compartilhada.remove(item)
+            return f"Item '{item}' removido com sucesso! Lista atual: {self.__class__.lista_compartilhada}"
+        return f"Item '{item}' não encontrado na lista. Lista atual: {self.__class__.lista_compartilhada}"
+
+    def exposed_contar_caracteres(self, texto):
+        return len(str(texto))
+
 
 if __name__ == "__main__":
     print(f"Servidor RPC iniciado em {HOST}:{PORT}")
