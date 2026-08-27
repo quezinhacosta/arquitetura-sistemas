@@ -39,7 +39,7 @@ class CalculadoraService(rpyc.Service):
         time.sleep(segundos)
         return f"Servidor demorou {segundos} segundo(s) para responder"
 
-    def exposed_remover_item(self, texto):
+    def exposed_remover_item(self, item):
         if item in self.__class__.lista_compartilhada:
             self.__class__.lista_compartilhada.remove(item)
             return f"Item '{item}' removido com sucesso! Lista atual: {self.__class__.lista_compartilhada}"
