@@ -1,9 +1,5 @@
 # Prática de RPC com Python (RPyC)
 
-Atividade prática desenvolvida para a disciplina de **Arquitetura de Sistemas**, com o objetivo de explorar os conceitos de Chamada de Procedimento Remoto (RPC), manipulação de estado remoto, sincronismo e tratamento de erros utilizando a biblioteca `RPyC`.
-
----
-
 ## Funções adicionadas 
 
 - Remover item da lista
